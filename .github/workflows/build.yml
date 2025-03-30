@@ -99,7 +99,7 @@ jobs:
             scottyhardy/docker-remote-desktop:debian-${{ steps.extract_version.outputs.DEBIAN_CODENAME }},
             scottyhardy/docker-remote-desktop:debian-${{ steps.extract_version.outputs.DEBIAN_MAJOR_VERSION }},
             scottyhardy/docker-remote-desktop:debian-${{ steps.extract_version.outputs.DEBIAN_VERSION }},
-            scottyhardy/docker-remote-desktop:debian-${{ steps.extract_version.outputs.DEBIAN_VERSION }}-${{ steps.extract_version.outputs.DATE }}
+            scottyhardy/docker-remote-desktop:debian-${{ steps.extract_version.outputs.DEBIAN_VERSION }}-${{ steps.get_date.outputs.DATE }}
 
       - name: Update Docker Hub repository description
         uses: peter-evans/dockerhub-description@v3
